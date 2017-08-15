@@ -43,6 +43,7 @@
 
 <body>
 	<div class="wrapper">
+	
 		<%@include file="./shared/navbar.jsp"%>
 		<!-- Page Content -->
 
@@ -64,7 +65,13 @@
 				<!-- Contact content -->
 				<%@include file="contact.jsp"%>
 			</c:if>
-
+			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
+				<!-- Contact content -->
+				<%@include file="listProducts.jsp"%>
+			
+			</c:if>
+			
+			
 			<!-- /.container -->
 
 		</div>
