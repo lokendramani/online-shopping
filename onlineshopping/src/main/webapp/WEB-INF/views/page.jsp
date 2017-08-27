@@ -81,6 +81,13 @@
 				<%@include file="singleProduct.jsp"%>
 			
 			</c:if>
+			
+			<!-- Load only when User click ManageProduct -->
+			<c:if test="${userClickManageProduct == true}">
+				<!-- Contact content -->
+				<%@include file="manageProducts.jsp"%>
+			
+			</c:if>
 						
 			
 			<!-- /.container -->
@@ -92,13 +99,20 @@
 
 		<!-- jQuery -->
 		<script src="${js}/jquery.js"></script>
-
+		
+		<!-- jQuery validation -->
+		<script src="${js}/jquery.validate.js"></script>
+		
+		
 		<!-- Bootstrap Core JavaScript -->
 		<script src="${js}/bootstrap.min.js"></script>
 		<!-- Data Table Jquery -->
 		<script src="${js}/jquery.dataTables.js"></script>
 		<!-- Data Table Bootstrap js -->
 		<script src="${js}/dataTables.bootstrap.js"></script>
+		
+		<!-- Bootbox js -->
+		<script src="${js}/bootbox.min.js"></script>
 		
 		
 		<!-- Self coded JS file -->
